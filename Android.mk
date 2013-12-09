@@ -17,6 +17,10 @@ LOCAL_RESOURCE_DIR += packages/apps/DU-Tweaks/res
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
 	--extra-packages com.dirtyunicorns.dutweaks
 
+LOCAL_SRC_FILES += \
+        src/com/android/location/XT/IXTSrv.aidl \
+        src/com/android/location/XT/IXTSrvCb.aidl
+
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
