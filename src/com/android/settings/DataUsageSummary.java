@@ -2265,10 +2265,7 @@ public class DataUsageSummary extends HighlightingFragment implements Indexable 
         final TelephonyManager tele = TelephonyManager.from(context);
 
         // require both supported network and ready SIM
-        long defaultSubId = SubscriptionManager.getDefaultDataSubId();
-        int slotId = SubscriptionManager.getSlotId(defaultSubId);
-        return conn.isNetworkSupported(TYPE_MOBILE) &&
-                tele.getSimState(slotId) == SIM_STATE_READY;
+        return conn.isNetworkSupported(TYPE_MOBILE) && tele.getSimState() == SIM_STATE_READY;
     }
 
     /**
